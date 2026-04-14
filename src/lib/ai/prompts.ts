@@ -4,6 +4,8 @@ import provincesData from '@/data/provinces.json';
 interface PromptContext {
   province: string;
   totalDays: number;
+  transportMode?: '自驾' | '飞机' | '高铁';
+  tripPace?: '特种兵' | '常规' | '休闲';
   provinceData?: typeof provincesData[number];
   xiYongShen?: WuXingElement;
   deficientElements?: WuXingElement[];
@@ -97,12 +99,37 @@ function buildBaZiContext(context: PromptContext): string {
   return text;
 }
 
+function buildTravelPrefsContext(context: PromptContext): string {
+  let text = '';
+
+  if (context.transportMode) {
+    const transportDesc: Record<string, string> = {
+      '自驾': '用户选择自驾出行。请根据自驾特点安排行程：可以安排偏远/小众景点，标注驾车距离和时间，提醒停车信息，不需要考虑公共交通衔接。',
+      '飞机': '用户选择飞机出行。请安排机场接驳交通，市内建议打车或地铁，跨城市优先推荐航班衔接。',
+      '高铁': '用户选择高铁出行。请围绕高铁站规划行程，跨城市优先安排高铁衔接，市内建议地铁/公交/打车。',
+    };
+    text += `\n【交通方式】\n${transportDesc[context.transportMode]}\n`;
+  }
+
+  if (context.tripPace) {
+    const paceDesc: Record<string, string> = {
+      '特种兵': '用户选择"特种兵"模式（最紧凑）。每天早7点出发，晚10点回酒店。每天安排4-6个景点，行程排满，不留空闲时间，追求最大化体验。可安排夜宵。',
+      '常规': '用户选择"常规"模式（中等节奏）。每天早9点出发，晚9点回酒店。每天安排2-4个景点，节奏适中，留有休息和自由活动时间。',
+      '休闲': '用户选择"休闲"模式（最轻松）。每天早11点出门，晚8点回酒店。每天安排1-2个景点，大量自由时间，重点在美食和慢节奏体验。午餐可以晚一些，以brunch形式呈现。',
+    };
+    text += `\n【行程节奏】\n${paceDesc[context.tripPace]}\n`;
+  }
+
+  return text;
+}
+
 export function buildItineraryPrompt(context: PromptContext): {
   system: string;
   user: string;
 } {
   const provinceContext = buildProvinceContext(context.province);
   const baziContext = buildBaZiContext(context);
+  const prefsContext = buildTravelPrefsContext(context);
 
   const system = `你是一位资深的中国旅游规划师和美食家，精通中国各地的风土人情、名胜古迹和地方美食。你的任务是根据用户需求生成详细的旅行行程。
 
@@ -119,8 +146,9 @@ export function buildItineraryPrompt(context: PromptContext): {
 4. 早餐推荐当地早市或特色早点铺
 5. 午餐推荐正餐餐厅（当地知名餐馆）
 6. 晚餐推荐夜市或大排档或当地特色晚餐店
-7. 每天安排2-4个景点，合理安排游览顺序和时间
-8. 提供实用的旅行贴士（交通、天气、注意事项等）
+7. 根据用户选择的行程节奏合理安排景点数量和时间
+8. 根据用户选择的交通方式安排城际交通和市内出行
+9. 提供实用的旅行贴士（交通、天气、注意事项等）
 
 ## 五行食疗
 如果提供了八字五行信息，请将五行食疗建议融入餐食推荐中，选择符合五行养生的食材和菜品。
@@ -135,10 +163,11 @@ ${ITINERARY_JSON_SCHEMA}
 - 直接输出JSON，不要用\`\`\`json\`\`\`包裹
 - 确保JSON格式完全合法，所有字符串使用双引号
 - meals数组中type字段只能是以下值之一："早餐"、"午餐"、"晚餐"、"夜宵"
-- 每天至少包含3个meal（早餐、午餐、晚餐）`;
+- 每天至少包含3个meal（早餐、午餐、晚餐）
+- transportation字段要写明具体的出行方式和时间`;
 
   const user = `请为我规划一个${context.province}${context.totalDays}天的旅行行程。
-${provinceContext}${baziContext}
+${prefsContext}${provinceContext}${baziContext}
 请生成完整的JSON格式行程，包含每日三餐的具体餐厅推荐和景点安排。`;
 
   return { system, user };

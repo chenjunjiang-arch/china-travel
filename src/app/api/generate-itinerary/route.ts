@@ -7,6 +7,8 @@ import { WuXingElement } from '@/types/bazi';
 interface RequestBody {
   province: string;
   totalDays: number;
+  transportMode?: '自驾' | '飞机' | '高铁';
+  tripPace?: '特种兵' | '常规' | '休闲';
   xiYongShen?: WuXingElement;
   deficientElements?: WuXingElement[];
   foodTherapyAdvice?: string;
@@ -48,7 +50,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check cache
-    const cacheKey = `${body.province}-${body.totalDays}-${body.xiYongShen || ''}-${(body.deficientElements || []).join(',')}`;
+    const cacheKey = `${body.province}-${body.totalDays}-${body.transportMode || ''}-${body.tripPace || ''}-${body.xiYongShen || ''}-${(body.deficientElements || []).join(',')}`;
     const cached = itineraryCache.get(cacheKey);
     if (cached) {
       const encoder = new TextEncoder();
@@ -73,6 +75,8 @@ export async function POST(request: NextRequest) {
     const { system, user } = buildItineraryPrompt({
       province: body.province,
       totalDays: body.totalDays,
+      transportMode: body.transportMode,
+      tripPace: body.tripPace,
       xiYongShen: body.xiYongShen,
       deficientElements: body.deficientElements,
       foodTherapyAdvice: body.foodTherapyAdvice,

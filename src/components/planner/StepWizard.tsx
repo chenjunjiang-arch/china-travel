@@ -13,16 +13,31 @@ import InkButton from '@/components/ui/InkButton';
 import Disclaimer from '@/components/ui/Disclaimer';
 import ProvinceSelector from './ProvinceSelector';
 import DurationPicker from './DurationPicker';
+import TravelPreferences, { TransportMode, TripPace } from './TravelPreferences';
 import BirthInfoStep from './BirthInfoStep';
 import ItineraryDisplay from './ItineraryDisplay';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const STEP_LABELS = ['选择省份', '旅行天数', '生辰八字', '生成行程'];
+const STEP_LABELS = ['选择省份', '出行偏好', '旅行天数', '生辰八字', '生成行程'];
+
+const PACE_LABELS: Record<TripPace, string> = {
+  '特种兵': '特种兵模式',
+  '常规': '常规模式',
+  '休闲': '休闲模式',
+};
+
+const TRANSPORT_LABELS: Record<TransportMode, string> = {
+  '自驾': '自驾游',
+  '飞机': '飞机出行',
+  '高铁': '高铁出行',
+};
 
 export default function StepWizard() {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedProvince, setSelectedProvince] = useState<string | null>(null);
+  const [transportMode, setTransportMode] = useState<TransportMode>('高铁');
+  const [tripPace, setTripPace] = useState<TripPace>('常规');
   const [totalDays, setTotalDays] = useState(5);
   const [birthInfo, setBirthInfo] = useState<BirthInfo | null>(null);
   const [itinerary, setItinerary] = useState<Itinerary | null>(null);
@@ -32,12 +47,13 @@ export default function StepWizard() {
 
   const canProceed = () => {
     if (currentStep === 1) return selectedProvince !== null;
-    if (currentStep === 2) return totalDays >= 1 && totalDays <= 14;
+    if (currentStep === 2) return true; // preferences always valid
+    if (currentStep === 3) return totalDays >= 1 && totalDays <= 14;
     return true;
   };
 
   const goNext = () => {
-    if (currentStep < 4 && canProceed()) {
+    if (currentStep < 5 && canProceed()) {
       setCurrentStep((s) => s + 1);
     }
   };
@@ -50,12 +66,12 @@ export default function StepWizard() {
 
   const handleBirthInfoSubmit = (info: BirthInfo) => {
     setBirthInfo(info);
-    setCurrentStep(4);
+    setCurrentStep(5);
   };
 
   const handleSkipBirthInfo = () => {
     setBirthInfo(null);
-    setCurrentStep(4);
+    setCurrentStep(5);
   };
 
   const generateItinerary = useCallback(async () => {
@@ -67,7 +83,6 @@ export default function StepWizard() {
     setItinerary(null);
 
     try {
-      // Compute BaZi-related data if birth info was provided
       let xiYongShen: string | undefined;
       let deficientElements: string[] | undefined;
       let foodTherapyAdvice: string | undefined;
@@ -84,7 +99,6 @@ export default function StepWizard() {
         foodTherapyAdvice = recommendation.description;
       }
 
-      // 30 second timeout
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 30000);
 
@@ -97,6 +111,8 @@ export default function StepWizard() {
           body: JSON.stringify({
             province: selectedProvince,
             totalDays,
+            transportMode,
+            tripPace,
             xiYongShen,
             deficientElements,
             foodTherapyAdvice,
@@ -112,7 +128,6 @@ export default function StepWizard() {
       clearTimeout(timeoutId);
 
       if (!response.ok) {
-        // Try to parse error body for user-friendly message (e.g. API key not configured)
         let serverMessage = '';
         try {
           const errBody = await response.json();
@@ -141,14 +156,12 @@ export default function StepWizard() {
         setStreamingText(parser.getText());
       }
 
-      // Parse final text
       const finalText = parser.getText();
       const parsed = parseItineraryResponse(finalText);
       if (parsed) {
         setItinerary(parsed);
         setStreamingText('');
       } else {
-        // Keep raw text visible
         setStreamingText(finalText);
       }
     } catch (err) {
@@ -156,7 +169,7 @@ export default function StepWizard() {
     } finally {
       setIsGenerating(false);
     }
-  }, [selectedProvince, totalDays, birthInfo]);
+  }, [selectedProvince, totalDays, transportMode, tripPace, birthInfo]);
 
   const handleRetry = () => {
     generateItinerary();
@@ -165,6 +178,8 @@ export default function StepWizard() {
   const handleStartOver = () => {
     setCurrentStep(1);
     setSelectedProvince(null);
+    setTransportMode('高铁');
+    setTripPace('常规');
     setTotalDays(5);
     setBirthInfo(null);
     setItinerary(null);
@@ -188,7 +203,7 @@ export default function StepWizard() {
                 {i > 0 && (
                   <div
                     className={clsx(
-                      'h-px w-6 sm:w-10 mx-1 sm:mx-2',
+                      'h-px w-4 sm:w-8 mx-0.5 sm:mx-1.5',
                       isCompleted ? 'bg-cinnabar' : 'bg-ink/15'
                     )}
                   />
@@ -196,7 +211,7 @@ export default function StepWizard() {
                 <div className="flex flex-col items-center gap-1">
                   <div
                     className={clsx(
-                      'flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold transition-all',
+                      'flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full text-xs sm:text-sm font-bold transition-all',
                       isActive && 'bg-cinnabar text-white shadow-md',
                       isCompleted && 'bg-cinnabar/80 text-white',
                       !isActive && !isCompleted && 'bg-ink/10 text-ink/40'
@@ -206,7 +221,7 @@ export default function StepWizard() {
                   </div>
                   <span
                     className={clsx(
-                      'text-[10px] sm:text-xs whitespace-nowrap',
+                      'text-[9px] sm:text-xs whitespace-nowrap',
                       isActive ? 'text-cinnabar font-medium' : 'text-ink/40'
                     )}
                   >
@@ -229,8 +244,21 @@ export default function StepWizard() {
           </div>
         )}
 
-        {/* Step 2: Duration */}
+        {/* Step 2: Travel preferences */}
         {currentStep === 2 && (
+          <div>
+            <h2 className="text-xl font-bold text-ink mb-6 text-center">出行偏好</h2>
+            <TravelPreferences
+              transportMode={transportMode}
+              tripPace={tripPace}
+              onTransportChange={setTransportMode}
+              onPaceChange={setTripPace}
+            />
+          </div>
+        )}
+
+        {/* Step 3: Duration */}
+        {currentStep === 3 && (
           <div>
             <h2 className="text-xl font-bold text-ink mb-6 text-center">选择旅行天数</h2>
             <DurationPicker
@@ -241,24 +269,29 @@ export default function StepWizard() {
           </div>
         )}
 
-        {/* Step 3: Birth info */}
-        {currentStep === 3 && (
+        {/* Step 4: Birth info */}
+        {currentStep === 4 && (
           <div>
             <h2 className="text-xl font-bold text-ink mb-4 text-center">五行食疗（可选）</h2>
             <BirthInfoStep onSubmit={handleBirthInfoSubmit} onSkip={handleSkipBirthInfo} />
           </div>
         )}
 
-        {/* Step 4: Generate & results */}
-        {currentStep === 4 && (
+        {/* Step 5: Generate & results */}
+        {currentStep === 5 && (
           <div>
             {!isGenerating && !itinerary && !streamingText && !error && (
               <div className="text-center py-8">
                 <h2 className="text-xl font-bold text-ink mb-2">准备就绪</h2>
-                <p className="text-ink/60 mb-2">
+                <p className="text-ink/60 mb-1">
                   目的地：<span className="font-medium text-ink">{selectedProvince}</span>
                   {' '}&middot;{' '}
                   天数：<span className="font-medium text-ink">{totalDays}天</span>
+                </p>
+                <p className="text-ink/60 mb-2">
+                  <span className="font-medium text-ink">{TRANSPORT_LABELS[transportMode]}</span>
+                  {' '}&middot;{' '}
+                  <span className="font-medium text-ink">{PACE_LABELS[tripPace]}</span>
                   {birthInfo && (
                     <>
                       {' '}&middot;{' '}
@@ -296,7 +329,6 @@ export default function StepWizard() {
               isGenerating={isGenerating}
             />
 
-            {/* Post-generation actions */}
             {(itinerary || (streamingText && !isGenerating)) && (
               <div className="flex justify-center gap-3 mt-8">
                 <InkButton variant="secondary" onClick={handleRetry}>
@@ -312,7 +344,7 @@ export default function StepWizard() {
       </div>
 
       {/* Navigation buttons */}
-      {currentStep < 4 && (
+      {currentStep < 5 && (
         <div className="flex items-center justify-between mt-8 pt-4 border-t border-ink/10">
           <div>
             {currentStep > 1 && (
@@ -329,7 +361,7 @@ export default function StepWizard() {
         </div>
       )}
 
-      {currentStep === 4 && !isGenerating && (
+      {currentStep === 5 && !isGenerating && (
         <div className="mt-4">
           <InkButton variant="ghost" onClick={goBack}>
             <ChevronLeft className="h-4 w-4" />
@@ -338,7 +370,6 @@ export default function StepWizard() {
         </div>
       )}
 
-      {/* Disclaimer at bottom */}
       <div className="mt-8">
         <Disclaimer message="AI生成内容仅供参考，餐厅信息和价格可能随时间变化，请出行前核实。" />
       </div>
