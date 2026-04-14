@@ -1,0 +1,593 @@
+[
+  {
+    "name": "四川省",
+    "shortName": "川",
+    "capital": "成都",
+    "description": "天府之国，以壮丽的自然风光和悠久的历史文化闻名。拥有九寨沟、峨眉山等世界级景区，是大熊猫的故乡。",
+    "cuisineStyle": "川菜，以麻辣鲜香著称，善用花椒、辣椒，讲究一菜一格、百菜百味",
+    "bestSeasons": ["春", "秋"],
+    "cities": [
+      {
+        "name": "成都",
+        "description": "四川省省会，国家历史文化名城，以休闲文化和美食闻名于世，被誉为「天府之国」的核心。",
+        "attractions": ["武侯祠", "杜甫草堂", "宽窄巷子", "锦里古街", "大熊猫繁育研究基地"],
+        "dishes": [
+          { "name": "麻婆豆腐", "description": "以花椒和辣椒调味的经典豆腐菜肴，麻辣鲜香，口感嫩滑", "spicyLevel": 4 },
+          { "name": "担担面", "description": "以芝麻酱和辣椒油为底的传统面食，香辣可口", "spicyLevel": 3 },
+          { "name": "夫妻肺片", "description": "以牛肉、牛舌、牛心等为主料的凉拌菜，麻辣鲜美", "spicyLevel": 3 },
+          { "name": "龙抄手", "description": "成都传统小吃，皮薄馅嫩，汤鲜味美", "spicyLevel": 1 },
+          { "name": "钟水饺", "description": "以红油为主味的传统水饺，皮薄馅鲜，甜辣交融", "spicyLevel": 2 }
+        ]
+      },
+      {
+        "name": "乐山",
+        "description": "因乐山大佛闻名世界，佛教文化底蕴深厚，同时也是四川美食的重要发源地之一。",
+        "attractions": ["乐山大佛", "峨眉山", "嘉阳小火车", "犍为文庙"],
+        "dishes": [
+          { "name": "甜皮鸭", "description": "乐山特色美食，外皮酥脆焦糖色，肉质鲜嫩多汁", "spicyLevel": 0 },
+          { "name": "翘脚牛肉", "description": "乐山传统名菜，汤清肉嫩，药膳风味", "spicyLevel": 1 },
+          { "name": "钵钵鸡", "description": "以陶钵盛放的冷食串串，红油浸泡，麻辣鲜香", "spicyLevel": 3 }
+        ]
+      },
+      {
+        "name": "九寨沟",
+        "description": "世界自然遗产地，以翠海、叠瀑、彩林、雪峰闻名，被誉为人间仙境。",
+        "attractions": ["五花海", "诺日朗瀑布", "珍珠滩", "长海", "五彩池"],
+        "dishes": [
+          { "name": "牦牛肉", "description": "高原特色美食，肉质紧实，蛋白质丰富", "spicyLevel": 1 },
+          { "name": "青稞酒", "description": "藏族传统饮品，以青稞为原料酿制，口感醇厚", "spicyLevel": 0 },
+          { "name": "酥油茶", "description": "藏族传统饮品，以酥油和砖茶熬制，咸香浓郁", "spicyLevel": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "云南省",
+    "shortName": "滇",
+    "capital": "昆明",
+    "description": "彩云之南，拥有丰富的自然资源和多元的民族文化。气候宜人，四季如春，是著名的旅游胜地。",
+    "cuisineStyle": "滇菜，擅用野生菌、鲜花入菜，口味酸辣鲜香，民族特色浓郁",
+    "bestSeasons": ["春", "秋", "冬"],
+    "cities": [
+      {
+        "name": "昆明",
+        "description": "云南省省会，被誉为「春城」，四季如春，鲜花常开，是前往云南各地的交通枢纽。",
+        "attractions": ["滇池", "石林", "翠湖公园", "金马碧鸡坊", "云南民族村"],
+        "dishes": [
+          { "name": "过桥米线", "description": "云南最著名的小吃，汤鲜料足，以鸡汤为底，配以各种新鲜食材", "spicyLevel": 1 },
+          { "name": "汽锅鸡", "description": "以建水紫陶汽锅蒸制的鸡汤，原汁原味，鲜美无比", "spicyLevel": 0 },
+          { "name": "鲜花饼", "description": "以玫瑰花瓣为馅的传统糕点，花香浓郁，酥脆可口", "spicyLevel": 0 },
+          { "name": "野生菌火锅", "description": "以云南特产各类野生菌为主料的火锅，鲜香醇厚", "spicyLevel": 1 }
+        ]
+      },
+      {
+        "name": "大理",
+        "description": "白族聚居地，拥有苍山洱海的绝美风光和深厚的南诏文化底蕴，是文艺青年向往之地。",
+        "attractions": ["洱海", "苍山", "大理古城", "崇圣寺三塔", "双廊古镇"],
+        "dishes": [
+          { "name": "白族三道茶", "description": "白族待客之礼，一苦二甜三回味，寓意人生哲理", "spicyLevel": 0 },
+          { "name": "乳扇", "description": "大理白族特色奶制品，烤制或油炸后食用，奶香浓郁", "spicyLevel": 0 },
+          { "name": "饵丝", "description": "大理传统米制面食，口感软糯，搭配肉酱食用", "spicyLevel": 1 }
+        ]
+      },
+      {
+        "name": "丽江",
+        "description": "世界文化遗产地，纳西族文化的中心，以古城风貌和玉龙雪山闻名。",
+        "attractions": ["丽江古城", "玉龙雪山", "束河古镇", "泸沽湖", "蓝月谷"],
+        "dishes": [
+          { "name": "纳西烤鱼", "description": "丽江传统美食，以当地鲜鱼炭火烤制，外焦里嫩", "spicyLevel": 2 },
+          { "name": "腊排骨火锅", "description": "丽江特色火锅，以腌制腊排骨为主料，汤浓味鲜", "spicyLevel": 1 },
+          { "name": "鸡豆凉粉", "description": "纳西族传统小吃，以鸡豆制成，凉拌或煎食均可", "spicyLevel": 2 }
+        ]
+      },
+      {
+        "name": "西双版纳",
+        "description": "热带雨林王国，傣族文化的核心区域，拥有独特的热带风情和丰富的生物多样性。",
+        "attractions": ["中科院热带植物园", "野象谷", "曼听公园", "告庄西双景"],
+        "dishes": [
+          { "name": "菠萝饭", "description": "傣族特色美食，以菠萝为容器蒸制糯米饭，果香浓郁", "spicyLevel": 0 },
+          { "name": "傣味烤鸡", "description": "以香茅草等香料腌制后炭烤的鸡肉，外焦里嫩，香料味浓", "spicyLevel": 2 },
+          { "name": "酸笋煮鱼", "description": "傣族传统菜肴，以酸笋和鲜鱼同煮，酸辣开胃", "spicyLevel": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "广东省",
+    "shortName": "粤",
+    "capital": "广州",
+    "description": "岭南文化的发源地，经济发达，美食文化举世闻名。「食在广州」享誉全球，是粤菜的核心发源地。",
+    "cuisineStyle": "粤菜，讲究清淡鲜美、原汁原味，注重食材新鲜和烹饪技法",
+    "bestSeasons": ["秋", "冬"],
+    "cities": [
+      {
+        "name": "广州",
+        "description": "广东省省会，千年商都，岭南文化中心，以早茶文化和美食闻名世界。",
+        "attractions": ["广州塔", "陈家祠", "沙面岛", "白云山", "越秀公园"],
+        "dishes": [
+          { "name": "白切鸡", "description": "粤菜经典名菜，以清水煮熟后切块蘸酱食用，肉嫩皮滑，原味鲜美", "spicyLevel": 0 },
+          { "name": "虾饺", "description": "广式早茶四大天王之首，皮薄馅大，晶莹剔透，鲜虾口感弹牙", "spicyLevel": 0 },
+          { "name": "叉烧", "description": "广式烧腊代表，以蜜汁腌制猪肉烤制，甜香酥嫩", "spicyLevel": 0 },
+          { "name": "煲仔饭", "description": "砂锅焖制的米饭，底层有香脆锅巴，配以腊味或滑鸡", "spicyLevel": 0 },
+          { "name": "肠粉", "description": "广州传统早餐，以米浆蒸制的薄粉皮包裹馅料，滑嫩可口", "spicyLevel": 0 }
+        ]
+      },
+      {
+        "name": "潮州",
+        "description": "潮汕文化的发源地，以精致的潮菜和功夫茶文化闻名，被称为「美食之乡」。",
+        "attractions": ["广济桥", "开元寺", "牌坊街", "韩文公祠"],
+        "dishes": [
+          { "name": "潮汕牛肉火锅", "description": "以新鲜手切牛肉为主料的火锅，肉质鲜嫩，蘸沙茶酱食用", "spicyLevel": 0 },
+          { "name": "潮汕肠粉", "description": "以鲜虾、猪肉等为馅的米浆肠粉，口感滑嫩", "spicyLevel": 0 },
+          { "name": "蚝烙", "description": "以鲜蚝和番薯粉煎制的传统小吃，外酥内嫩", "spicyLevel": 0 }
+        ]
+      },
+      {
+        "name": "佛山",
+        "description": "中国武术之乡，南派武术发源地，岭南文化重镇，制陶业历史悠久。",
+        "attractions": ["祖庙", "南风古灶", "梁园", "西樵山"],
+        "dishes": [
+          { "name": "佛山扎蹄", "description": "以猪蹄卤制的传统美食，皮糯肉烂，味道浓厚", "spicyLevel": 0 },
+          { "name": "顺德双皮奶", "description": "以水牛奶制成的经典甜品，口感嫩滑如凝脂", "spicyLevel": 0 },
+          { "name": "均安蒸猪", "description": "顺德传统名菜，整猪蒸制，皮脆肉嫩", "spicyLevel": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "北京市",
+    "shortName": "京",
+    "capital": "北京",
+    "description": "中国首都，拥有三千多年建城史和八百多年建都史。世界著名古都，政治文化中心。",
+    "cuisineStyle": "京菜，融合宫廷菜、鲁菜和地方风味，以烤鸭、涮羊肉等为代表",
+    "bestSeasons": ["秋"],
+    "cities": [
+      {
+        "name": "北京",
+        "description": "千年古都，汇聚了故宫、长城等世界级文化遗产，是中国政治、文化和国际交往中心。",
+        "attractions": ["故宫", "长城（八达岭）", "天坛", "颐和园", "南锣鼓巷"],
+        "dishes": [
+          { "name": "北京烤鸭", "description": "享誉世界的北京名菜，以果木炭火烤制，皮脆肉嫩，配薄饼和葱丝食用", "spicyLevel": 0 },
+          { "name": "炸酱面", "description": "老北京传统面食，以黄酱和肉丁炸制的酱料拌面，配以各种菜码", "spicyLevel": 0 },
+          { "name": "涮羊肉", "description": "北京传统火锅，以铜锅清汤涮食羊肉，蘸芝麻酱食用", "spicyLevel": 0 },
+          { "name": "豆汁儿", "description": "老北京特色饮品，以绿豆发酵而成，口味独特，配焦圈食用", "spicyLevel": 0 },
+          { "name": "卤煮火烧", "description": "老北京平民美食，以猪下水和火烧同煮，汤浓味厚", "spicyLevel": 1 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "上海市",
+    "shortName": "沪",
+    "capital": "上海",
+    "description": "中国最大的经济中心城市，国际化大都市，融合中西文化的魔都。以外滩万国建筑群和现代摩天大楼闻名。",
+    "cuisineStyle": "本帮菜（上海菜），以浓油赤酱著称，口味偏甜，注重食材本味",
+    "bestSeasons": ["春", "秋"],
+    "cities": [
+      {
+        "name": "上海",
+        "description": "东方明珠，中国经济金融中心，汇聚古今中外文化精华的国际大都市。",
+        "attractions": ["外滩", "东方明珠", "城隍庙", "田子坊", "南京路步行街"],
+        "dishes": [
+          { "name": "小笼包", "description": "上海经典点心，皮薄馅鲜，汤汁丰富，一口一个鲜美无比", "spicyLevel": 0 },
+          { "name": "红烧肉", "description": "本帮菜经典，以五花肉慢炖而成，色泽红亮，入口即化", "spicyLevel": 0 },
+          { "name": "生煎馒头", "description": "上海传统小吃，底部焦脆金黄，馅料多汁鲜美", "spicyLevel": 0 },
+          { "name": "蟹粉豆腐", "description": "以大闸蟹黄蟹膏烹制的豆腐菜肴，鲜美浓郁", "spicyLevel": 0 },
+          { "name": "葱油拌面", "description": "以葱油和酱油调味的简约面食，葱香浓郁，口感爽滑", "spicyLevel": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "浙江省",
+    "shortName": "浙",
+    "capital": "杭州",
+    "description": "江南鱼米之乡，山水秀丽，文化底蕴深厚。拥有西湖、乌镇等著名景点，经济发达。",
+    "cuisineStyle": "浙菜，清淡鲜嫩，讲究原汁原味，分杭帮菜、宁波菜、绍兴菜等流派",
+    "bestSeasons": ["春", "秋"],
+    "cities": [
+      {
+        "name": "杭州",
+        "description": "浙江省省会，「上有天堂，下有苏杭」中的人间天堂，以西湖美景和茶文化闻名。",
+        "attractions": ["西湖", "灵隐寺", "雷峰塔", "西溪湿地", "龙井茶园"],
+        "dishes": [
+          { "name": "西湖醋鱼", "description": "杭帮菜名菜，以草鱼烹制，酸甜可口，鱼肉鲜嫩", "spicyLevel": 0 },
+          { "name": "东坡肉", "description": "以苏东坡命名的名菜，五花肉慢炖至酥烂，色泽红亮", "spicyLevel": 0 },
+          { "name": "龙井虾仁", "description": "以龙井茶叶和鲜虾仁同炒，茶香清新，虾仁鲜嫩", "spicyLevel": 0 },
+          { "name": "叫化鸡", "description": "以荷叶和泥巴包裹烤制的鸡肉，肉质酥烂，荷香四溢", "spicyLevel": 0 }
+        ]
+      },
+      {
+        "name": "乌镇",
+        "description": "千年水乡古镇，江南六大古镇之一，保留了完整的水乡风貌和传统文化。",
+        "attractions": ["东栅景区", "西栅景区", "茅盾故居", "乌镇大剧院"],
+        "dishes": [
+          { "name": "红烧羊肉", "description": "乌镇冬季名菜，以湖羊肉慢炖而成，酥烂入味", "spicyLevel": 0 },
+          { "name": "白水鱼", "description": "乌镇特色河鲜，肉质细嫩，清蒸最佳", "spicyLevel": 0 },
+          { "name": "姑嫂饼", "description": "乌镇传统糕点，酥脆香甜，是百年老字号点心", "spicyLevel": 0 }
+        ]
+      },
+      {
+        "name": "宁波",
+        "description": "浙江省重要港口城市，海洋文化浓厚，拥有天一阁等历史文化遗产。",
+        "attractions": ["天一阁", "老外滩", "东钱湖", "溪口风景区"],
+        "dishes": [
+          { "name": "宁波汤圆", "description": "以黑芝麻为馅的传统汤圆，皮糯馅甜，汤清味美", "spicyLevel": 0 },
+          { "name": "红膏炝蟹", "description": "宁波传统名菜，以新鲜梭子蟹腌制，蟹膏红亮，鲜美无比", "spicyLevel": 0 },
+          { "name": "雪菜大汤黄鱼", "description": "以雪里蕻和黄鱼炖制的汤菜，汤白味鲜", "spicyLevel": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "陕西省",
+    "shortName": "陕",
+    "capital": "西安",
+    "description": "华夏文明的重要发祥地，十三朝古都所在地。拥有兵马俑、华山等举世闻名的文化遗产和自然景观。",
+    "cuisineStyle": "陕菜，以面食为主，口味酸辣咸香，豪放粗犷，回民小吃独具特色",
+    "bestSeasons": ["春", "秋"],
+    "cities": [
+      {
+        "name": "西安",
+        "description": "十三朝古都，古称长安，中华文明的重要发祥地，丝绸之路的起点。",
+        "attractions": ["秦始皇兵马俑", "大雁塔", "西安城墙", "回民街", "华清宫"],
+        "dishes": [
+          { "name": "羊肉泡馍", "description": "西安传统名吃，将馍掰碎后与羊肉汤同煮，汤浓肉烂，暖身暖胃", "spicyLevel": 1 },
+          { "name": "肉夹馍", "description": "被称为「中国汉堡」，以腊汁肉夹入白吉馍中，肉烂馍酥", "spicyLevel": 0 },
+          { "name": "biangbiang面", "description": "陕西传统宽面条，以油泼辣子调味，面宽筋道，辣香可口", "spicyLevel": 3 },
+          { "name": "凉皮", "description": "陕西传统凉食，口感筋道，酸辣爽口，是夏季消暑佳品", "spicyLevel": 2 },
+          { "name": "胡辣汤", "description": "西安早餐必备，以牛肉丸和蔬菜煮制，胡椒味浓，辣而不燥", "spicyLevel": 2 }
+        ]
+      },
+      {
+        "name": "华山",
+        "description": "五岳之一的西岳华山，以险峻著称，是中国著名的道教圣地。",
+        "attractions": ["华山长空栈道", "华山北峰", "华山西峰", "华山东峰观日出"],
+        "dishes": [
+          { "name": "华山大刀面", "description": "华山脚下传统面食，以大刀切面，面条宽厚筋道", "spicyLevel": 1 },
+          { "name": "华阴老腔豆腐脑", "description": "华山当地传统早点，豆腐嫩滑，配以辣酱和醋", "spicyLevel": 1 },
+          { "name": "踅面", "description": "渭南传统面食，以荞麦面制成，口感独特", "spicyLevel": 1 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "湖南省",
+    "shortName": "湘",
+    "capital": "长沙",
+    "description": "湘楚文化的发源地，伟人故里，自然风光秀美。以张家界、岳麓山等景观闻名，湘菜辣味享誉全国。",
+    "cuisineStyle": "湘菜，以辣味著称，注重香辣、酸辣，口味浓重，善用腊制和腌制食材",
+    "bestSeasons": ["春", "秋"],
+    "cities": [
+      {
+        "name": "长沙",
+        "description": "湖南省省会，楚汉名城，娱乐之都，以夜生活和美食文化闻名。",
+        "attractions": ["岳麓山", "橘子洲头", "湖南省博物馆", "太平街", "坡子街"],
+        "dishes": [
+          { "name": "剁椒鱼头", "description": "湘菜代表名菜，以鱼头配以剁椒蒸制，鲜辣入味，色彩鲜艳", "spicyLevel": 4 },
+          { "name": "臭豆腐", "description": "长沙最著名的小吃，外焦里嫩，闻着臭吃着香", "spicyLevel": 2 },
+          { "name": "糖油粑粑", "description": "长沙传统甜食小吃，以糯米粉制成，外焦内糯，甜而不腻", "spicyLevel": 0 },
+          { "name": "小炒黄牛肉", "description": "湘菜经典，以新鲜黄牛肉大火快炒，香辣嫩滑", "spicyLevel": 3 }
+        ]
+      },
+      {
+        "name": "张家界",
+        "description": "世界自然遗产地，以奇峰怪石、云海仙境闻名，电影《阿凡达》取景地。",
+        "attractions": ["张家界国家森林公园", "天门山", "玻璃栈道", "黄龙洞", "宝峰湖"],
+        "dishes": [
+          { "name": "土家三下锅", "description": "张家界土家族特色菜，以腊肉、豆腐、萝卜同炖，味道浓郁", "spicyLevel": 3 },
+          { "name": "岩耳炖鸡", "description": "以张家界特产岩耳和土鸡炖制，营养丰富", "spicyLevel": 0 },
+          { "name": "酸鱼肉", "description": "土家族传统美食，以鱼肉腌制发酵，酸辣可口", "spicyLevel": 2 }
+        ]
+      },
+      {
+        "name": "凤凰古城",
+        "description": "沈从文笔下的边城，苗族土家族文化的重要聚居地，被誉为「中国最美小城」。",
+        "attractions": ["沱江跳岩", "虹桥", "沈从文故居", "万寿宫", "南华山"],
+        "dishes": [
+          { "name": "血粑鸭", "description": "凤凰特色名菜，以鸭血糯米和鸭肉同制，味道浓厚独特", "spicyLevel": 2 },
+          { "name": "苗家酸汤", "description": "苗族传统汤品，以多种蔬菜和米汤发酵而成，酸爽开胃", "spicyLevel": 2 },
+          { "name": "社饭", "description": "凤凰传统美食，以糯米、蒿菜和腊肉蒸制，清香可口", "spicyLevel": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "福建省",
+    "shortName": "闽",
+    "capital": "福州",
+    "description": "东南沿海省份，拥有独特的闽南文化和客家文化。海上丝绸之路的起点，茶文化底蕴深厚。",
+    "cuisineStyle": "闽菜，以鲜香清淡为主，擅长海鲜烹饪，注重汤菜，口味偏甜酸",
+    "bestSeasons": ["春", "秋"],
+    "cities": [
+      {
+        "name": "厦门",
+        "description": "海上花园城市，以鼓浪屿和闽南风情闻名，是中国最宜居城市之一。",
+        "attractions": ["鼓浪屿", "南普陀寺", "环岛路", "曾厝垵", "中山路步行街"],
+        "dishes": [
+          { "name": "沙茶面", "description": "厦门最具代表性的小吃，以沙茶酱为底料，配以各种海鲜和卤料", "spicyLevel": 1 },
+          { "name": "海蛎煎", "description": "闽南传统小吃，以新鲜海蛎和番薯粉煎制，外酥内嫩", "spicyLevel": 0 },
+          { "name": "土笋冻", "description": "厦门特色冷食，以沙虫熬制成冻，口感Q弹，蘸酱食用", "spicyLevel": 0 },
+          { "name": "姜母鸭", "description": "闽南传统药膳，以老姜和鸭肉炖煮，驱寒暖身", "spicyLevel": 1 }
+        ]
+      },
+      {
+        "name": "福州",
+        "description": "福建省省会，有「榕城」之称，历史悠久，拥有独特的闽都文化。",
+        "attractions": ["三坊七巷", "鼓山", "西湖公园", "林则徐纪念馆"],
+        "dishes": [
+          { "name": "佛跳墙", "description": "闽菜之王，以鲍鱼、海参、鱼翅等多种珍贵食材炖制，鲜美绝伦", "spicyLevel": 0 },
+          { "name": "鱼丸", "description": "福州传统名小吃，以鱼肉打成浆制丸，包裹猪肉馅，口感弹嫩", "spicyLevel": 0 },
+          { "name": "肉燕", "description": "福州特色小吃，以猪肉和番薯粉制皮包裹肉馅，皮薄馅鲜", "spicyLevel": 0 }
+        ]
+      },
+      {
+        "name": "武夷山",
+        "description": "世界文化与自然双遗产地，中国茶文化圣地，以大红袍和九曲溪闻名。",
+        "attractions": ["九曲溪", "天游峰", "大红袍景区", "武夷宫", "虎啸岩"],
+        "dishes": [
+          { "name": "岚谷熏鹅", "description": "武夷山特色美食，以茶叶和桂叶熏制鹅肉，茶香浓郁", "spicyLevel": 1 },
+          { "name": "紫溪粉", "description": "武夷山传统小吃，以大米磨浆蒸制，口感滑嫩", "spicyLevel": 0 },
+          { "name": "武夷山笋宴", "description": "以当地新鲜竹笋为主料的系列菜肴，鲜嫩可口", "spicyLevel": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "贵州省",
+    "shortName": "贵",
+    "capital": "贵阳",
+    "description": "多彩贵州，以壮美的喀斯特地貌和丰富的少数民族文化闻名。被誉为「山地公园省」，是天然的避暑胜地。",
+    "cuisineStyle": "黔菜，以酸辣为主味，善用酸汤和糟辣椒，民族风味浓郁",
+    "bestSeasons": ["春", "夏", "秋"],
+    "cities": [
+      {
+        "name": "贵阳",
+        "description": "贵州省省会，中国避暑之都，以凉爽气候和丰富的小吃文化著称。",
+        "attractions": ["甲秀楼", "青岩古镇", "黔灵山公园", "花溪公园"],
+        "dishes": [
+          { "name": "酸汤鱼", "description": "贵州最具代表性的菜肴，以苗族红酸汤煮制鲜鱼，酸辣鲜美", "spicyLevel": 3 },
+          { "name": "花溪牛肉粉", "description": "贵阳著名小吃，以醇厚的牛肉汤底配以米粉和牛肉，鲜香可口", "spicyLevel": 2 },
+          { "name": "丝娃娃", "description": "贵阳特色小吃，以薄面皮包裹各种蔬菜丝，蘸酸辣汁食用", "spicyLevel": 2 },
+          { "name": "肠旺面", "description": "贵阳传统面食，以猪大肠和血旺为主要配料，麻辣鲜香", "spicyLevel": 3 }
+        ]
+      },
+      {
+        "name": "黄果树",
+        "description": "亚洲最大的瀑布——黄果树瀑布所在地，以壮观的瀑布群和溶洞奇观闻名。",
+        "attractions": ["黄果树大瀑布", "天星桥", "陡坡塘瀑布", "龙宫"],
+        "dishes": [
+          { "name": "布依族五色花米饭", "description": "布依族传统美食，以天然植物染色糯米蒸制，色彩斑斓", "spicyLevel": 0 },
+          { "name": "鸡辣角", "description": "安顺特色菜肴，以鸡肉和辣椒同制，辣而鲜美", "spicyLevel": 3 },
+          { "name": "波波糖", "description": "安顺传统糖果，口感酥脆，甜而不腻", "spicyLevel": 0 }
+        ]
+      },
+      {
+        "name": "西江千户苗寨",
+        "description": "世界最大的苗族聚居村寨，保留了完整的苗族文化和建筑风貌。",
+        "attractions": ["苗寨吊脚楼", "观景台", "苗族博物馆", "嘎歌古巷"],
+        "dishes": [
+          { "name": "苗家长桌宴", "description": "苗族传统待客最高礼仪，数十道菜肴一字排开，热闹非凡", "spicyLevel": 2 },
+          { "name": "苗家酸汤牛肉", "description": "以苗族特制酸汤烹制牛肉，酸爽可口", "spicyLevel": 2 },
+          { "name": "糯米酒", "description": "苗族传统酒饮，以糯米酿制，甘甜绵柔", "spicyLevel": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "天津市",
+    "shortName": "津",
+    "capital": "天津",
+    "description": "北方重要港口城市，中西合璧的历史文化名城，以曲艺文化和小吃闻名。",
+    "cuisineStyle": "津菜，融合鲁菜和北方风味，以海鲜和传统小吃著称",
+    "bestSeasons": ["秋"],
+    "cities": []
+  },
+  {
+    "name": "重庆市",
+    "shortName": "渝",
+    "capital": "重庆",
+    "description": "山城重庆，中国四大直辖市之一，以火锅文化和立体城市景观闻名。",
+    "cuisineStyle": "渝菜，以麻辣为主，火锅闻名全国，善用花椒和辣椒",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "河北省",
+    "shortName": "冀",
+    "capital": "石家庄",
+    "description": "环绕京津的重要省份，拥有承德避暑山庄和长城等世界遗产。",
+    "cuisineStyle": "冀菜，融合京鲁风味，以驴肉火烧、坝上烤全羊等为代表",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "山西省",
+    "shortName": "晋",
+    "capital": "太原",
+    "description": "华夏文明发源地之一，以晋商文化和面食文化闻名。拥有平遥古城、云冈石窟等世界遗产。",
+    "cuisineStyle": "晋菜，以面食为核心，刀削面享誉全国，口味偏酸咸",
+    "bestSeasons": ["夏", "秋"],
+    "cities": []
+  },
+  {
+    "name": "辽宁省",
+    "shortName": "辽",
+    "capital": "沈阳",
+    "description": "东北老工业基地，拥有沈阳故宫等清代历史遗迹，大连海滨风光优美。",
+    "cuisineStyle": "辽菜，东北菜系代表之一，以炖菜和海鲜为特色，分量十足",
+    "bestSeasons": ["夏", "秋"],
+    "cities": []
+  },
+  {
+    "name": "吉林省",
+    "shortName": "吉",
+    "capital": "长春",
+    "description": "东北腹地，以长白山天池和雾凇岛闻名，冬季冰雪旅游资源丰富。",
+    "cuisineStyle": "吉菜，以炖菜和朝鲜族风味为特色，冬季美食丰富",
+    "bestSeasons": ["夏", "冬"],
+    "cities": []
+  },
+  {
+    "name": "黑龙江省",
+    "shortName": "黑",
+    "capital": "哈尔滨",
+    "description": "中国最北省份，以冰雪文化和中俄边境风情闻名，哈尔滨被称为「东方莫斯科」。",
+    "cuisineStyle": "龙江菜，融合俄式和东北风味，以炖菜、红肠、大列巴为代表",
+    "bestSeasons": ["夏", "冬"],
+    "cities": []
+  },
+  {
+    "name": "江苏省",
+    "shortName": "苏",
+    "capital": "南京",
+    "description": "经济强省，拥有苏州园林、南京明城墙等世界遗产，江南水乡文化的核心区域。",
+    "cuisineStyle": "苏菜（淮扬菜），讲究刀工和火候，口味清淡鲜美，精致典雅",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "安徽省",
+    "shortName": "皖",
+    "capital": "合肥",
+    "description": "拥有黄山、宏村等世界遗产，徽州文化底蕴深厚，徽商历史影响深远。",
+    "cuisineStyle": "徽菜，中国八大菜系之一，擅长烧炖，善用火腿佐味，口味重油重色",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "江西省",
+    "shortName": "赣",
+    "capital": "南昌",
+    "description": "红色革命圣地，拥有庐山、三清山等著名景点，景德镇以瓷器文化闻名世界。",
+    "cuisineStyle": "赣菜，口味偏辣，善用辣椒和米粉，菜品朴实浓香",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "山东省",
+    "shortName": "鲁",
+    "capital": "济南",
+    "description": "孔孟之乡，齐鲁文化发源地。拥有泰山、曲阜孔庙等世界遗产，海岸线绵长。",
+    "cuisineStyle": "鲁菜，中国八大菜系之首，讲究汤头和火候，口味咸鲜",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "河南省",
+    "shortName": "豫",
+    "capital": "郑州",
+    "description": "中原大地，华夏文明的核心发祥地。拥有龙门石窟、少林寺等世界遗产。",
+    "cuisineStyle": "豫菜，中国最古老的菜系之一，口味居中，五味调和，以面食见长",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "湖北省",
+    "shortName": "鄂",
+    "capital": "武汉",
+    "description": "千湖之省，长江中游重要省份。拥有武当山和三峡等著名景区，楚文化发源地。",
+    "cuisineStyle": "鄂菜，以蒸菜和鱼鲜为特色，口味偏咸鲜，武汉热干面闻名全国",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "海南省",
+    "shortName": "琼",
+    "capital": "海口",
+    "description": "中国最南端的省份，热带海岛旅游胜地。三亚是著名的国际旅游城市。",
+    "cuisineStyle": "琼菜，以海鲜和热带食材为主，口味清淡鲜美，椰子入菜为特色",
+    "bestSeasons": ["冬", "春"],
+    "cities": []
+  },
+  {
+    "name": "广西壮族自治区",
+    "shortName": "桂",
+    "capital": "南宁",
+    "description": "桂林山水甲天下，拥有壮美的喀斯特地貌和丰富的少数民族文化。",
+    "cuisineStyle": "桂菜，以酸辣为特色，擅用酸笋、螺蛳，柳州螺蛳粉风靡全国",
+    "bestSeasons": ["春", "秋"],
+    "cities": []
+  },
+  {
+    "name": "内蒙古自治区",
+    "shortName": "蒙",
+    "capital": "呼和浩特",
+    "description": "广袤的草原和沙漠之地，蒙古族文化的核心区域，以大草原和民族风情吸引游客。",
+    "cuisineStyle": "蒙菜，以牛羊肉和奶制品为主，烤全羊、手把肉为代表，风味豪放",
+    "bestSeasons": ["夏", "秋"],
+    "cities": []
+  },
+  {
+    "name": "西藏自治区",
+    "shortName": "藏",
+    "capital": "拉萨",
+    "description": "世界屋脊，雪域高原，以布达拉宫和藏传佛教文化闻名。自然风光壮丽神秘。",
+    "cuisineStyle": "藏餐，以酥油茶、青稞酒、牦牛肉为主，口味浓郁，适应高原环境",
+    "bestSeasons": ["夏", "秋"],
+    "cities": []
+  },
+  {
+    "name": "宁夏回族自治区",
+    "shortName": "宁",
+    "capital": "银川",
+    "description": "塞上江南，以沙坡头和西夏王陵闻名。回族文化浓郁，黄河灌溉造就富饶绿洲。",
+    "cuisineStyle": "清真菜为主，以滩羊肉和枸杞为特色，手抓羊肉鲜嫩无膻",
+    "bestSeasons": ["夏", "秋"],
+    "cities": []
+  },
+  {
+    "name": "新疆维吾尔自治区",
+    "shortName": "新",
+    "capital": "乌鲁木齐",
+    "description": "中国面积最大的省级行政区，拥有天山、喀纳斯等壮美景观，多民族文化交融。",
+    "cuisineStyle": "新疆菜，以牛羊肉为主，大盘鸡、馕、烤羊肉串闻名全国，风味浓郁",
+    "bestSeasons": ["夏", "秋"],
+    "cities": []
+  },
+  {
+    "name": "甘肃省",
+    "shortName": "甘",
+    "capital": "兰州",
+    "description": "丝绸之路的重要通道，拥有敦煌莫高窟、嘉峪关等世界遗产，地貌多样壮观。",
+    "cuisineStyle": "陇菜，以牛肉面闻名，口味偏咸辣，面食和牛羊肉为主",
+    "bestSeasons": ["夏", "秋"],
+    "cities": []
+  },
+  {
+    "name": "青海省",
+    "shortName": "青",
+    "capital": "西宁",
+    "description": "青藏高原东北部，拥有青海湖和茶卡盐湖等绝美自然景观，三江源头所在地。",
+    "cuisineStyle": "青海菜，以牛羊肉和面食为主，酿皮、甜醅子等小吃独具特色",
+    "bestSeasons": ["夏"],
+    "cities": []
+  },
+  {
+    "name": "台湾省",
+    "shortName": "台",
+    "capital": "台北",
+    "description": "宝岛台湾，拥有阿里山、日月潭等著名景点，夜市文化和美食享誉华人世界。",
+    "cuisineStyle": "台菜，融合闽菜和日式料理，以小吃和夜市美食为特色，口味多元",
+    "bestSeasons": ["春", "秋", "冬"],
+    "cities": []
+  },
+  {
+    "name": "香港特别行政区",
+    "shortName": "港",
+    "capital": "香港",
+    "description": "东方之珠，国际金融中心，中西文化交融的美食天堂和购物圣地。",
+    "cuisineStyle": "港式粤菜，中西合璧，以茶餐厅文化和粤式点心闻名世界",
+    "bestSeasons": ["秋", "冬"],
+    "cities": []
+  },
+  {
+    "name": "澳门特别行政区",
+    "shortName": "澳",
+    "capital": "澳门",
+    "description": "世界文化遗产之城，葡萄牙殖民历史遗迹与中华文化交融，以博彩业和美食闻名。",
+    "cuisineStyle": "澳门菜，中葡融合，以葡式蛋挞、猪扒包和土生葡菜为特色",
+    "bestSeasons": ["秋", "冬"],
+    "cities": []
+  }
+]

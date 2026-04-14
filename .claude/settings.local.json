@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Bash(node:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:pages.edgeone.ai)",
+      "WebFetch(domain:6tail.cn)",
+      "WebFetch(domain:blog.csdn.net)",
+      "WebFetch(domain:www.cnblogs.com)",
+      "WebFetch(domain:api-docs.deepseek.com)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(npm init:*)",
+      "Read(//c/Users/deone/CodeBuddy/**)",
+      "Bash(npx create-next-app@latest china-travel-temp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(cp -r eslint.config.mjs next.config.ts next-env.d.ts package.json package-lock.json postcss.config.mjs public src tsconfig.json \"/c/Users/deone/CodeBuddy/China Travel Itinerary/\")",
+      "Bash(cp -r node_modules \"/c/Users/deone/CodeBuddy/China Travel Itinerary/\")",
+      "Bash(npm install:*)",
+      "Bash(node -e \"console.log\\(require\\(''tailwindcss/package.json''\\).version\\)\")",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)",
+      "Bash(cd:*)",
+      "Bash(npx next:*)"
+    ]
+  }
+}

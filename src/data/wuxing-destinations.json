@@ -1,0 +1,47 @@
+{
+  "水": {
+    "element": "水",
+    "direction": "北方",
+    "destinationType": "海滨/湖泊/水乡",
+    "description": "水元素不足，建议前往有水的地方调和",
+    "recommendedProvinces": ["浙江省", "福建省", "广东省"],
+    "sceneryTypes": ["海滨", "湖泊", "水乡古镇", "温泉"],
+    "activities": ["游泳", "泡温泉", "游船", "海边散步"]
+  },
+  "木": {
+    "element": "木",
+    "direction": "东方",
+    "destinationType": "山林/森林/竹海",
+    "description": "木元素不足，建议前往山林之间感受生机",
+    "recommendedProvinces": ["云南省", "贵州省", "四川省"],
+    "sceneryTypes": ["原始森林", "竹海", "山谷", "茶园"],
+    "activities": ["徒步", "登山", "品茶", "森林浴"]
+  },
+  "火": {
+    "element": "火",
+    "direction": "南方",
+    "destinationType": "热带/古都/文化名城",
+    "description": "火元素不足，建议前往热情活力之地",
+    "recommendedProvinces": ["北京市", "陕西省", "湖南省"],
+    "sceneryTypes": ["古都遗迹", "热带风光", "历史名城", "火山地貌"],
+    "activities": ["参观古迹", "品味历史", "享受阳光", "观看表演"]
+  },
+  "土": {
+    "element": "土",
+    "direction": "中央",
+    "destinationType": "高原/田园/古村落",
+    "description": "土元素不足，建议前往大地厚重之处",
+    "recommendedProvinces": ["云南省", "贵州省", "陕西省"],
+    "sceneryTypes": ["高原", "梯田", "古村落", "丹霞地貌"],
+    "activities": ["田园体验", "古村漫步", "农耕文化", "陶艺体验"]
+  },
+  "金": {
+    "element": "金",
+    "direction": "西方",
+    "destinationType": "雪山/都市/矿泉",
+    "description": "金元素不足，建议前往西方高远之地",
+    "recommendedProvinces": ["四川省", "上海市", "浙江省"],
+    "sceneryTypes": ["雪山", "现代都市", "寺庙", "矿泉"],
+    "activities": ["登高望远", "城市观光", "寺庙禅修", "温泉疗养"]
+  }
+}

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Chinese ink-wash palette */
+  --color-ink: #1a1a2e;
+  --color-rice-paper: #f5f0e8;
+  --color-cinnabar: #c53030;
+  --color-jade: #2f855a;
+  --color-gold: #d69e2e;
+  --color-porcelain: #3182ce;
+
+  /* Chinese font family */
+  --font-chinese: "ZCOOL XiaoWei", "Noto Serif SC", "SimSun", serif;
+}
+
+:root {
+  --background: #f5f0e8;
+  --foreground: #1a1a2e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f0f1a;
+    --foreground: #f5f0e8;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-chinese);
+}
+
+/* Ink wash background gradient utility */
+.bg-ink-wash {
+  background: linear-gradient(
+    135deg,
+    #f5f0e8 0%,
+    #e8e0d0 25%,
+    #d4cabb 50%,
+    #e8e0d0 75%,
+    #f5f0e8 100%
+  );
+}
+
+/* Dark ink wash gradient */
+.bg-ink-wash-dark {
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #16213e 50%,
+    #1a1a2e 100%
+  );
+}
+
+/* Subtle rice paper texture */
+.bg-rice-texture {
+  background-color: #f5f0e8;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 180, 150, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(200, 180, 150, 0.1) 0%, transparent 50%);
+}
+
+/* Cinnabar accent border */
+.border-cinnabar-accent {
+  border-color: #c53030;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* Scroll-like container */
+.scroll-container {
+  background: linear-gradient(180deg, #e8dcc8 0%, #f5f0e8 5%, #f5f0e8 95%, #e8dcc8 100%);
+  border-left: 3px solid #c53030;
+  border-right: 3px solid #c53030;
+  padding: 2rem;
+  border-radius: 4px;
+}
+
+/* Fade-in animation for results */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(197, 48, 48, 0.2);
+  color: #1a1a2e;
+}

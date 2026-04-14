@@ -1,0 +1,72 @@
+{
+  "金": {
+    "element": "金",
+    "flavor": "辛",
+    "color": "白色",
+    "description": "金元素不足，宜多食辛味、白色食物",
+    "foods": ["白萝卜", "莲藕", "百合", "银耳", "梨", "白菜"],
+    "cuisineRecommendations": ["清淡粤菜", "淮扬菜", "杭帮菜"],
+    "avoidFoods": ["过于油腻", "煎炸食物"],
+    "mealSuggestions": {
+      "breakfast": "银耳莲子羹、白粥配萝卜糕",
+      "lunch": "清蒸鱼、白灼虾、莲藕排骨汤",
+      "dinner": "百合炒芦笋、银耳雪梨汤"
+    }
+  },
+  "木": {
+    "element": "木",
+    "flavor": "酸",
+    "color": "绿色",
+    "description": "木元素不足，宜多食酸味、绿色食物",
+    "foods": ["青菜", "绿豆", "猕猴桃", "柠檬", "醋", "青梅"],
+    "cuisineRecommendations": ["云南菜", "贵州酸汤", "素食"],
+    "avoidFoods": ["过于辛辣", "大量饮酒"],
+    "mealSuggestions": {
+      "breakfast": "绿豆粥、青菜包子、猕猴桃",
+      "lunch": "酸汤鱼、青椒炒肉、凉拌青瓜",
+      "dinner": "清炒时蔬、酸笋老鸭汤"
+    }
+  },
+  "水": {
+    "element": "水",
+    "flavor": "咸",
+    "color": "黑色/深色",
+    "description": "水元素不足，宜多食咸味、黑色/海鲜食物",
+    "foods": ["海鲜", "黑豆", "黑芝麻", "紫菜", "海带", "黑米"],
+    "cuisineRecommendations": ["闽菜海鲜", "粤式海鲜", "日式料理"],
+    "avoidFoods": ["过甜食物", "干燥食物"],
+    "mealSuggestions": {
+      "breakfast": "黑米粥、紫菜蛋花汤、海苔",
+      "lunch": "清蒸海鱼、海带排骨汤、盐焗虾",
+      "dinner": "海鲜火锅、黑豆炖猪蹄"
+    }
+  },
+  "火": {
+    "element": "火",
+    "flavor": "苦",
+    "color": "红色",
+    "description": "火元素不足，宜多食苦味、红色食物",
+    "foods": ["苦瓜", "红枣", "枸杞", "西红柿", "红豆", "辣椒"],
+    "cuisineRecommendations": ["湘菜", "川菜", "烧烤"],
+    "avoidFoods": ["生冷食物", "冰饮"],
+    "mealSuggestions": {
+      "breakfast": "红枣枸杞粥、西红柿鸡蛋面",
+      "lunch": "剁椒鱼头、红烧肉、麻辣香锅",
+      "dinner": "火锅、烤串、红豆汤"
+    }
+  },
+  "土": {
+    "element": "土",
+    "flavor": "甘",
+    "color": "黄色",
+    "description": "土元素不足，宜多食甘味、黄色食物",
+    "foods": ["南瓜", "红薯", "小米", "玉米", "蜂蜜", "山药"],
+    "cuisineRecommendations": ["鲁菜", "面食", "陕西小吃"],
+    "avoidFoods": ["过酸食物", "腌制食品"],
+    "mealSuggestions": {
+      "breakfast": "小米粥、南瓜饼、玉米棒",
+      "lunch": "山药炖鸡、肉夹馍、油泼面",
+      "dinner": "红薯粥、蜂蜜烤鸡翅"
+    }
+  }
+}
